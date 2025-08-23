@@ -1,1 +1,1 @@
-# SnapTrust
+# SnapTrust frontend
