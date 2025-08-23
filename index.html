@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnapTrust</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="logo-container">
+    <!-- <img src="assets/snaptrust-logo.png" alt="SnapTrust Logo" class="logo-img" /> -->
+  </div>
+
+  <div id="home-screen" class="screen active">
+    <div class="background-texture"></div>
+    <div class="content-container">
+      <div class="logo-row">
+  <img src="snaptrustlogo.png" alt="SnapTrust Logo" class="logo-img" />
+  <h1 class="logo-text">SNAPTRUST</h1>
+</div>      <div class="hero-text"><span class="glitch">Verifying Reality in a Digital Age.</span></div>
+      <p class="subtitle">The best platform to detect whether your photo is fake or real.</p>
+      <p class="note">Upload your image securely — we know how important your data is. It stays private between you and us.</p>
+      <button id="try-now-btn" class="primary-btn">TRY NOW</button>
+    </div>
+    <div class="line-effect"></div>
+  </div>
+
+  <div id="verify-screen" class="screen">
+    <div class="background-texture"></div>
+    <div class="content-container">
+      <h2 class="title">Verify Your Media</h2>
+      <p class="subtitle">Upload an image to check for AI manipulation.</p>
+      <div class="upload-area" id="upload-area">
+        <span class="upload-icon">⬆</span>
+        <p>Drag & Drop or <span class="browse-link">Browse</span> an image</p>
+        <input type="file" id="image-upload" accept="image/*" class="file-input" />
+      </div>
+      <div class="image-preview" id="image-preview-container">
+        <img id="preview-image" src="#" alt="Image Preview" />
+        <span class="clear-btn">&times;</span>
+      </div>
+      <button id="verify-now-btn" class="secondary-btn" disabled>VERIFY NOW</button>
+      <button class="back-home-btn secondary-btn">BACK TO HOME</button>
+      <p class="note">Supports JPEG, PNG, WEBP. Max file size: 10MB.</p>
+    </div>
+  </div>
+
+  <div id="result-screen" class="screen">
+    <div class="background-texture"></div>
+    <div class="content-container">
+      <h2 id="result-title" class="title"></h2>
+      <div class="result-details">
+        <div class="result-box">
+          <p class="label">ANALYSIS RESULT</p>
+          <h3 class="result-text">90% REAL</h3>
+        </div>
+      </div>
+      <div class="result-bar-container">
+        <p class="bar-label">AUTHENTICITY SCORE</p>
+        <div class="result-bar-bg">
+          <div id="result-bar" class="result-bar"></div>
+        </div>
+        <div class="bar-legend"><span>DEEPFAKE</span><span>REAL</span></div>
+      </div>
+      <p class="disclaimer">This is a preliminary analysis. Results are probabilistic and should be used for informational purposes only.</p>
+      <button id="new-analysis-btn" class="secondary-btn">NEW ANALYSIS</button>
+      <button class="back-home-btn secondary-btn">BACK TO HOME</button>
+    </div>
+  </div>
+
+  <div id="analyzing-overlay" class="overlay hidden">
+    <div class="spinner"></div>
+    <p class="analyzing-text">ANALYZING...</p>
+  </div>
+
+  <footer class="footer"><p>SnapTrust — Prototype in Progress</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
